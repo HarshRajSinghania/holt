@@ -13,5 +13,4 @@ def test_models_help_names_an_example_per_common_provider(capsys):
     text = capsys.readouterr().out
     for line in MODELS_HELP_EPILOG.splitlines():
         assert line in text, line
-    for provider in MODELS_HELP_PROVIDERS:
-        assert provider in PROVIDER_PRESETS
+    assert set(MODELS_HELP_PROVIDERS) <= set(PROVIDER_PRESETS)
