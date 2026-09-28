@@ -24,8 +24,6 @@ import os
 import sys
 from pathlib import Path
 
-from holt import models_help as _models_help  # noqa: F401  # installs models --help epilog
-
 APP = "holt"
 
 
